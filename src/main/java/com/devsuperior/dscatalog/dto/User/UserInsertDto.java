@@ -1,7 +1,7 @@
-package com.devsuperior.dscatalog.dto;
+package com.devsuperior.dscatalog.dto.User;
 
 import com.devsuperior.dscatalog.entities.User;
-import com.devsuperior.dscatalog.services.validations.UserInsertValid;
+import com.devsuperior.dscatalog.services.validations.insert.UserInsertValid;
 
 @UserInsertValid
 public class UserInsertDto extends UserDto {

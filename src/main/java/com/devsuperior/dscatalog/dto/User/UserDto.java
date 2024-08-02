@@ -1,5 +1,6 @@
-package com.devsuperior.dscatalog.dto;
+package com.devsuperior.dscatalog.dto.User;
 
+import com.devsuperior.dscatalog.dto.RoleDto;
 import com.devsuperior.dscatalog.entities.User;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

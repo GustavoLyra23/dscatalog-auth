@@ -1,7 +1,7 @@
 package com.devsuperior.dscatalog.resources.exceptions;
 
-import com.devsuperior.dscatalog.dto.FieldError;
-import com.devsuperior.dscatalog.dto.ValidationErrors;
+import com.devsuperior.dscatalog.dto.error.FieldError;
+import com.devsuperior.dscatalog.dto.error.ValidationErrors;
 import com.devsuperior.dscatalog.services.exceptions.DatabaseException;
 import com.devsuperior.dscatalog.services.exceptions.ResourceNotFoundException;
 import jakarta.servlet.http.HttpServletRequest;

@@ -1,8 +1,9 @@
 package com.devsuperior.dscatalog.services;
 
 import com.devsuperior.dscatalog.dto.RoleDto;
-import com.devsuperior.dscatalog.dto.UserDto;
-import com.devsuperior.dscatalog.dto.UserInsertDto;
+import com.devsuperior.dscatalog.dto.User.UserDto;
+import com.devsuperior.dscatalog.dto.User.UserInsertDto;
+import com.devsuperior.dscatalog.dto.User.UserUpdateDto;
 import com.devsuperior.dscatalog.entities.Role;
 import com.devsuperior.dscatalog.entities.User;
 import com.devsuperior.dscatalog.repositories.RoleRepository;
@@ -38,7 +39,7 @@ public class UserService {
     public Page<UserDto> findAllPaged(Pageable pageable) {
         UserDto UserDto = new UserDto();
         Page<User> list = repository.findAll(pageable);
-        return list.map(com.devsuperior.dscatalog.dto.UserDto::new);
+        return list.map(com.devsuperior.dscatalog.dto.User.UserDto::new);
     }
 
     @Transactional(readOnly = true)
@@ -58,7 +59,7 @@ public class UserService {
     }
 
     @Transactional
-    public UserDto update(Long id, UserDto dto) {
+    public UserDto update(Long id, UserUpdateDto dto) {
         try {
             User entity = repository.getReferenceById(id);
             copyDtoToEntity(dto, entity);

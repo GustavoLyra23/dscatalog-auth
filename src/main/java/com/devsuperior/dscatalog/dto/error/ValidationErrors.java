@@ -1,4 +1,4 @@
-package com.devsuperior.dscatalog.dto;
+package com.devsuperior.dscatalog.dto.error;
 
 import com.devsuperior.dscatalog.resources.exceptions.StandardError;
 

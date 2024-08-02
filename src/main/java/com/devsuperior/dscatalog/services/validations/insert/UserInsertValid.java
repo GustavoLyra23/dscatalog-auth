@@ -1,4 +1,4 @@
-package com.devsuperior.dscatalog.services.validations;
+package com.devsuperior.dscatalog.services.validations.insert;
 
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;

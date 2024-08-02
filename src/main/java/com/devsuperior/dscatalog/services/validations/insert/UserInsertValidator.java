@@ -1,7 +1,7 @@
-package com.devsuperior.dscatalog.services.validations;
+package com.devsuperior.dscatalog.services.validations.insert;
 
-import com.devsuperior.dscatalog.dto.FieldError;
-import com.devsuperior.dscatalog.dto.UserInsertDto;
+import com.devsuperior.dscatalog.dto.error.FieldError;
+import com.devsuperior.dscatalog.dto.User.UserInsertDto;
 import com.devsuperior.dscatalog.entities.User;
 import com.devsuperior.dscatalog.repositories.UserRepository;
 import jakarta.validation.ConstraintValidator;
@@ -28,9 +28,8 @@ public class UserInsertValidator implements ConstraintValidator<UserInsertValid,
 
         User user = userRepository.findByEmail(userInsertDto.getEmail());
         if (user != null) {
-            fieldErrors.add(new FieldError("email","email ja existe"));
+            fieldErrors.add(new FieldError("email", "email ja existe"));
         }
-
 
         fieldErrors.forEach(fieldError -> {
             context.disableDefaultConstraintViolation();
